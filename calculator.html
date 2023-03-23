@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Calculator </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<style>
+    #clear {
+        width: 270px;
+        border: 3px solid gray;
+        border-radius: 3px;
+        padding: 20px;
+        background-color: red;
+    }
+
+    .formstyle {
+        margin: auto;
+        margin-top: 10px;
+        width: 280px;
+        height: 570px;
+        border: 3px solid black;
+        background-color: azure;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+
+
+    input {
+        width: 25px;
+        background-color: rgb(6, 147, 6);
+        color: white;
+        border: 3px solid gray;
+        border-radius: 5px;
+        padding: 26px;
+        margin: 5px;
+        font-size: 18px;
+    }
+
+
+    #calc {
+        width: 230px;
+        border: 5px solid black;
+        border-radius: 3px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    footer {
+        margin-top: 10px;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px rgb(211, 208, 208);
+    }
+
+    marquee {
+        padding: 15px;
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 5px rgb(209, 206, 206);
+        letter-spacing: 1.2px;
+
+    }
+
+    #blink {
+        animation: blinker 1s linear infinite;
+        color: red;
+        font-weight: bold;
+    }
+
+    .operation{
+         background-color: rgb(217, 111, 12); 
+        /* background-color: rgb(166, 176, 185); */
+    }
+
+
+    /* For mobile phones: */
+    @media only screen and (max-width: 768px) {
+        #clear {
+            margin-top: 15px;
+            width: 270px;
+        }
+
+        .formstyle {
+            margin-top: 20px;
+            width: 85%;
+            height: 580px;
+        }
+
+        input {
+            width: 25px;
+        }
+
+        #calc {
+            width: 230px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+    }
+</style>
+
+</head>
+
+<body>
+
+    <marquee><a id="blink"> &#9677 </a>&nbsp;note: Welcome to Online Calculator! This is free & easy to use. This calculator is designed to help you perform a wide range of calculations quickly and accurately..</marquee>
+
+    <div class="formstyle">
+        <form name="form1">
+
+
+            <input id="calc" type="text" name="answer"> <br> <br>
+
+            <input type="button" value="1" onclick="form1.answer.value += '1' ">
+            <input type="button" value="2" onclick="form1.answer.value += '2' ">
+            <input type="button" value="3" onclick="form1.answer.value += '3' ">
+            <input  class= "operation" type="button" value="+" onclick="form1.answer.value += '+' ">
+            <br> <br>
+
+            <input type="button" value="4" onclick="form1.answer.value += '4' ">
+            <input type="button" value="5" onclick="form1.answer.value += '5' ">
+            <input type="button" value="6" onclick="form1.answer.value += '6' ">
+            <input  class= "operation" type="button" value="-" onclick="form1.answer.value += '-' ">
+            <br> <br>
+
+            <input type="button" value="7" onclick="form1.answer.value += '7' ">
+            <input type="button" value="8" onclick="form1.answer.value += '8' ">
+            <input type="button" value="9" onclick="form1.answer.value += '9' ">
+            <input  class= "operation" type="button" value="*" onclick="form1.answer.value += '*' ">
+            <br> <br>
+
+
+            <input type="button" value="/" onclick="form1.answer.value += '/' ">
+            <input type="button" value="0" onclick="form1.answer.value += '0' ">
+            <input type="button" value="." onclick="form1.answer.value += '.' ">
+
+            <input  class= "operation" type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value) ">
+            <br>
+
+            <input type="button" value="Clear All" onclick="form1.answer.value = ' ' " id="clear">
+            <br>
+
+        </form>
+    </div>
+
+    <footer>
+        Created by Mr. Ashwani Agnihotri@2023
+    </footer>
+
+    <script>
+
+
+        let result; // declaration of the variable.  
+
+
+        if (operator == '+') { // use + (addition) operator to add two numbers  
+            result = number1 + number2;
+        }
+        else if (operator == '-') { // use -  (subtraction) operator to subtract two numbers  
+            result = number1 - number2;
+        }
+        else if (operator == '*') { // use * (multiplication) operator to multiply two numbers  
+            result = number1 * number2;
+        }
+        else {
+            result = number1 / number2; // use / (division) operator to divide two numbers  
+        }
+
+
+    </script>
+
+</body>
+
+</html>
